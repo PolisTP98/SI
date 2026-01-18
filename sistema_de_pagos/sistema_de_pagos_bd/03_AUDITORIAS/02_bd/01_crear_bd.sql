@@ -1,0 +1,21 @@
+USE sistema_de_pagos;
+GO
+
+CREATE DATABASE AUDIT SPECIFICATION actualizaciones_sistema_pagos 
+FOR SERVER AUDIT auditoria_sistema_de_pagos 
+
+-- 1) REGISTRAR LOS INSERTS DE LA BASE DE DATOS
+ADD (INSERT ON SCHEMA::gral BY public), 
+ADD (INSERT ON SCHEMA::sp BY public), 
+ADD (INSERT ON SCHEMA::[usr] BY public), 
+ADD (INSERT ON SCHEMA::pdts BY public), 
+
+-- 2) REGISTRAR LOS UPDATES DE LA BASE DE DATOS
+ADD (UPDATE ON SCHEMA::gral BY public), 
+ADD (UPDATE ON SCHEMA::sp BY public), 
+ADD (UPDATE ON SCHEMA::[usr] BY public), 
+ADD (UPDATE ON SCHEMA::pdts BY public) 
+
+-- 3) HABILITAR EL SERVIDOR
+WITH (STATE = ON);
+GO

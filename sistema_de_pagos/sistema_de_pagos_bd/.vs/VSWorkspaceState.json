@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\01_BD",
+    "\\02_TABLAS",
+    "\\02_TABLAS\\01_catalogos",
+    "\\02_TABLAS\\02_tablas_principales",
+    "\\03_AUDITORIAS",
+    "\\03_AUDITORIAS\\01_SERVIDOR",
+    "\\03_AUDITORIAS\\02_BD"
+  ],
+  "SelectedNode": "\\01_BD\\03_crear_esquemas.sql",
+  "PreviewInSolutionExplorer": false
+}
